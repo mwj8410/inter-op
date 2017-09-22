@@ -22,4 +22,4 @@ First off, the initial intention of this project was to establish a singular pat
 
 The `node-addon-api` satisfies this requirement for C++ code hosted in Node, but it does not provide the basis for a standard approach that can be used with other languages.
 
-With this in mind, child-process and TCP interop is sill likely the most universal approach.
+With this in mind, child-process and TCP interop is still likely the most universal approach.
