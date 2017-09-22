@@ -1,0 +1,30 @@
+{
+  "name": "inter-op",
+  "version": "0.0.1",
+  "description": "Prooving groound for node interoperability with other languages.",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zandaqo/iswasmfast.git"
+  },
+  "author": "Matthew W. Jackson <mwj8410@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "1.1.2",
+    "node-addon-api": "^0.6.3",
+    "node-gyp": "^3.6.2"
+  },
+  "engines": {
+    "node": ">=8.5.0",
+    "npm": ">=5.4.2"
+  },
+  "gypfile": true,
+  "devDependencies": {},
+  "scripts": {
+    "start": "node --napi-modules ./src/demo.js",
+    "configure": "node-gyp configure",
+    "build:node": "node-gyp rebuild --release",
+    "build:wasm": "emcc --bind -std=c++14 src/wasm.cpp -s WASM=1 -O3 -o wasm.js",
+    "test": "node --napi-modules ./node_modules/jest/bin/jest.js --runInBand"
+  }
+}
