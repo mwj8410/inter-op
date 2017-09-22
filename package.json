@@ -1,5 +1,5 @@
 {
-  "name": "inter-op",
+  "name": "node-addon-api-inter-op",
   "version": "0.0.1",
   "description": "Prooving groound for node interoperability with other languages.",
   "keywords": [],
